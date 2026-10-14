@@ -7,13 +7,13 @@ Aplikasi web streaming film bioskop, serial TV, drama Korea (Drakor), dan anime 
 ## ✨ Fitur Utama FaizFilm
 
 1. **Multi-Server Streaming Player**:
-   - **Server 1: Netflix VIP (VidLink Pro)** - 1080p / 4K UHD, Subtitle Offset Calibration (⚙️)
-   - **Server 2: Prime Video (Embed.su)** - CDN 1080p Full HD Super Cepat
-   - **Server 3: Disney+ (Vidsrc.cc v2)** - Full HD 60FPS
-   - **Server 4: Idlix Prime (Vidsrc.xyz)** - Prioritas Subtitle Bahasa Indonesia
-   - **Server 5: MultiEmbed Ultra** - Streaming cadangan global
-   - **Server 6: SmashyStream** - Fast Cloud Feed
-   - **Server 7: AutoEmbed VIP** - Mirror backup
+   - **Server 1: MultiEmbed (Utama)** - 1080p Full HD, terbukti paling stabil & lancar
+   - **Server 2: MultiEmbed Direct** - Mirror direct stream super cepat
+   - **Server 3: Smashy 5-in-1** - Pilihan 5 server alternatif di dalam player
+   - **Server 4: VidSrc (LK21 / Idlix)** - Server populer film bioskop & serial
+   - **Server 5: AutoEmbed Cloud** - Cadangan cepat tanpa iklan pop-up
+   - **Server 6: 2Embed VIP** - Server cadangan stabil
+   - **Server 7: VidLink Fast** - 1080p / 4K UHD High Bitrate
    - *Tersedia shortcut keyboard (Angka 1-7 ganti server, Panah Kiri/Kanan ganti episode, ESC untuk keluar).*
 
 2. **Siaran Langsung Olahraga Asli (Live Sports 24/7)**:

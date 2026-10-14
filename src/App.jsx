@@ -302,7 +302,7 @@ export default function App() {
                   </div>
                   <div>
                     <h4 style={{ fontSize: '0.98rem', fontWeight: 800, color: '#fff', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
-                      <span>Server Netflix VIP, Prime Video & Siaran Langsung Olahraga HD!</span>
+                      <span>Streaming Multi-Server Cepat & Siaran Langsung Olahraga HD!</span>
                       <span
                         style={{
                           fontSize: '0.62rem',

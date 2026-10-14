@@ -43,12 +43,12 @@ export default function Footer({ onSelectTab }) {
               </span>
             </div>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', lineHeight: 1.6, maxWidth: '380px' }}>
-              Platform streaming film bioskop, serial TV, drama Korea, anime, dan siaran langsung olahraga gratis kualitas 4K & 1080p Full HD dengan server ala Netflix & Prime Video.
+              Platform streaming film bioskop, serial TV, drama Korea, anime, dan siaran langsung olahraga gratis kualitas 1080p Full HD dengan server MultiEmbed paling stabil.
             </p>
             <div style={{ display: 'flex', gap: '0.5rem', marginTop: '1.25rem', flexWrap: 'wrap' }}>
-              <span className="badge badge-hd">4K / 1080P HD</span>
+              <span className="badge badge-hd">1080P FULL HD</span>
               <span className="badge badge-sub">SUBTITLE INDONESIA</span>
-              <span className="badge badge-series">NETFLIX & PRIME SERVERS</span>
+              <span className="badge badge-series">MULTI-SERVER CEPAT</span>
             </div>
           </div>
 
@@ -86,13 +86,13 @@ export default function Footer({ onSelectTab }) {
               Server Streaming
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.55rem', fontSize: '0.85rem', color: 'var(--text-muted)' }}>
-              <span style={{ color: '#e50914', fontWeight: 700 }}>Server 1: Netflix VIP (4K)</span>
-              <span style={{ color: '#00a8e1', fontWeight: 700 }}>Server 2: Prime Video HD</span>
-              <span style={{ color: '#38bdf8', fontWeight: 700 }}>Server 3: Disney+ Stream</span>
-              <span>VidLink Pro HD</span>
-              <span>Idlix Prime Sub Indo</span>
-              <span>LK21 VIP Ultra</span>
-              <span>Cloud Backup Fast</span>
+              <span style={{ color: '#e50914', fontWeight: 700 }}>Server 1: MultiEmbed (Utama)</span>
+              <span style={{ color: '#10b981', fontWeight: 700 }}>Server 2: Direct Mirror</span>
+              <span style={{ color: '#8b5cf6', fontWeight: 700 }}>Server 3: Smashy 5-in-1</span>
+              <span>Server 4: VidSrc (LK21 / Idlix)</span>
+              <span>Server 5: AutoEmbed Cloud</span>
+              <span>Server 6: 2Embed VIP</span>
+              <span>Server 7: VidLink Fast</span>
             </div>
           </div>
 

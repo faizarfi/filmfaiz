@@ -75,7 +75,7 @@ export default function SettingsModal({ onClose }) {
           <div>
             <h4 style={{ fontSize: '0.92rem', fontWeight: 700, color: '#fff', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
               <Server size={16} color="#10b981" />
-              <span>Status Server Embed (Netflix / Prime / LK21 / Idlix):</span>
+              <span>Status Server Embed (MultiEmbed / Smashy / VidSrc / AutoEmbed):</span>
             </h4>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.65rem' }}>
               {STREAM_SERVERS.map((s) => (

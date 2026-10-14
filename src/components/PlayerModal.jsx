@@ -323,13 +323,13 @@ export default function PlayerModal({
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.5rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#fff', fontSize: '0.85rem', fontWeight: 700 }}>
                 <span style={{ fontSize: '1rem' }}>⚡</span>
-                <span>Kalibrasi Subtitle & Resolusi 1080p:</span>
+                <span>Server Rekomendasi (MultiEmbed Utama):</span>
               </div>
               <div style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap' }}>
                 <button
-                  onClick={() => setActiveServer('netflix_vip')}
+                  onClick={() => setActiveServer('multiembed')}
                   style={{
-                    background: activeServer === 'netflix_vip' ? '#e50914' : 'rgba(255, 255, 255, 0.05)',
+                    background: activeServer === 'multiembed' ? '#e50914' : 'rgba(255, 255, 255, 0.05)',
                     color: '#fff',
                     border: '1px solid rgba(229, 9, 20, 0.4)',
                     padding: '0.25rem 0.6rem',
@@ -339,14 +339,14 @@ export default function PlayerModal({
                     cursor: 'pointer',
                   }}
                 >
-                  Netflix VIP (Offset di ⚙️)
+                  Server 1: MultiEmbed (Utama)
                 </button>
                 <button
-                  onClick={() => setActiveServer('prime_video')}
+                  onClick={() => setActiveServer('multiembed_direct')}
                   style={{
-                    background: activeServer === 'prime_video' ? '#00a8e1' : 'rgba(255, 255, 255, 0.05)',
+                    background: activeServer === 'multiembed_direct' ? '#10b981' : 'rgba(255, 255, 255, 0.05)',
                     color: '#fff',
-                    border: '1px solid rgba(0, 168, 225, 0.4)',
+                    border: '1px solid rgba(16, 185, 129, 0.4)',
                     padding: '0.25rem 0.6rem',
                     borderRadius: '4px',
                     fontSize: '0.72rem',
@@ -354,14 +354,14 @@ export default function PlayerModal({
                     cursor: 'pointer',
                   }}
                 >
-                  Prime Video (1080p CDN)
+                  Server 2: Direct Mirror
                 </button>
                 <button
-                  onClick={() => setActiveServer('idlix_prime')}
+                  onClick={() => setActiveServer('smashystream')}
                   style={{
-                    background: activeServer === 'idlix_prime' ? '#f59e0b' : 'rgba(255, 255, 255, 0.05)',
+                    background: activeServer === 'smashystream' ? '#8b5cf6' : 'rgba(255, 255, 255, 0.05)',
                     color: '#fff',
-                    border: '1px solid rgba(245, 158, 11, 0.4)',
+                    border: '1px solid rgba(139, 92, 246, 0.4)',
                     padding: '0.25rem 0.6rem',
                     borderRadius: '4px',
                     fontSize: '0.72rem',
@@ -369,17 +369,14 @@ export default function PlayerModal({
                     cursor: 'pointer',
                   }}
                 >
-                  Idlix (Sub Manual Pas)
+                  Server 3: Smashy 5-in-1
                 </button>
               </div>
             </div>
 
             <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', lineHeight: 1.5 }}>
-              <span style={{ color: '#e50914', fontWeight: 700 }}>• Subtitle Telat / Kecepatan? </span>
-              Di player <strong>Netflix VIP (Server 1)</strong>: Klik ikon <strong>Gear (⚙️)</strong> di kanan bawah player ➔ pilih <strong>Subtitles</strong> ➔ geser <strong>Subtitle Offset</strong> (-1.5s / +1.5s) agar teks pas persis dengan suara aktor!
-              <br/>
-              <span style={{ color: '#00a8e1', fontWeight: 700 }}>• Resolusi 1080p / 4K: </span>
-              Resolusi otomatis Full HD 1080p. Bila internet sedang lambat, player akan otomatis menyesuaikan agar tidak buffering.
+              <span style={{ color: '#10b981', fontWeight: 700 }}>• Server 1 (MultiEmbed) Aktif: </span>
+              Server paling stabil dan terbukti lancar memutar film & serial. Jika teks subtitle bahasa Indonesia belum muncul, klik tombol <strong>CC</strong> di dalam kontrol pemutar.
             </div>
           </div>
 
@@ -403,7 +400,7 @@ export default function PlayerModal({
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
               <ShieldAlert size={18} color="#e50914" style={{ flexShrink: 0 }} />
               <span>
-                <strong style={{ color: '#fff' }}>Tips Streaming:</strong> Tersedia server <strong>Netflix VIP</strong>, <strong>Prime Video</strong>, & <strong>Disney+</strong>. Jika buffering, ganti server di bawah.
+                <strong style={{ color: '#fff' }}>Tips Menonton:</strong> Server 1 (MultiEmbed) adalah server rekomendasi yang paling stabil. Jika buffering, pilih server alternatif di bawah.
                 <br/>
                 <strong style={{ color: '#f5c518', fontSize: '0.78rem' }}>⌨️ Shortcut:</strong>
                 <span style={{ fontSize: '0.76rem' }}> Tekan angka <strong>1-7</strong> ganti server • <strong>← →</strong> pindah episode • <strong>ESC</strong> tutup</span>
@@ -441,7 +438,7 @@ export default function PlayerModal({
             >
               <Server size={16} color="#e50914" />
               <span style={{ fontSize: '0.88rem', fontWeight: 700, color: '#ffffff' }}>
-                Pilihan Server Streaming (Netflix, Prime Video, Disney+, LK21, Idlix):
+                Pilihan Server Streaming (MultiEmbed, SmashyStream, VidSrc, AutoEmbed):
               </span>
             </div>
 
