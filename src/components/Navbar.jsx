@@ -86,11 +86,11 @@ export default function Navbar({
   const navItems = [
     { id: 'home', label: 'Beranda', icon: Sparkles },
     { id: 'sports', label: 'Live Olahraga', icon: Trophy, isLive: true },
-    { id: 'movies', label: 'Film Bioskop', icon: Film },
-    { id: 'series', label: 'Serial TV', icon: Tv },
-    { id: 'kdrama', label: 'Drakor', icon: Flame },
-    { id: 'anime', label: 'Anime', icon: PlayCircle },
+    { id: 'movies', label: 'Film Barat', icon: Film },
     { id: 'indo', label: 'Film Indo', icon: Film },
+    { id: 'kdrama', label: 'Drakor', icon: Flame },
+    { id: 'anime', label: 'Anime (Bstation)', icon: PlayCircle },
+    { id: 'series', label: 'Serial TV', icon: Tv },
     { id: 'genre', label: 'Genre', icon: Sparkles },
   ];
 

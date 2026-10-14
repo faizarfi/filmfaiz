@@ -154,7 +154,7 @@ export default function DetailModal({
                 <button
                   onClick={() => {
                     onClose();
-                    onWatch(movie);
+                    onWatch({ ...movie, media_type: mediaType });
                   }}
                   className="btn btn-primary"
                   style={{ width: '100%' }}

@@ -42,7 +42,7 @@ export default function PlayerModal({
   const [copiedLink, setCopiedLink] = useState(false);
   const [showShareModal, setShowShareModal] = useState(false);
 
-  const mediaType = movie.media_type || (movie.title ? 'movie' : 'tv');
+  const mediaType = movie.media_type || (movie.first_air_date || movie.seasons || (movie.name && !movie.title) ? 'tv' : 'movie');
   const isSeries = mediaType === 'tv';
   const title = movie.title || movie.name || 'Menonton Film';
 
@@ -323,7 +323,7 @@ export default function PlayerModal({
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.5rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#fff', fontSize: '0.85rem', fontWeight: 700 }}>
                 <span style={{ fontSize: '1rem' }}>⚡</span>
-                <span>Server Rekomendasi (MultiEmbed Utama):</span>
+                <span>Server Streaming Cepat (LK21, IDLIX, Moviebox, Bstation):</span>
               </div>
               <div style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap' }}>
                 <button
@@ -339,7 +339,22 @@ export default function PlayerModal({
                     cursor: 'pointer',
                   }}
                 >
-                  Server 1: MultiEmbed (Utama)
+                  Server 1: LK21 (Utama)
+                </button>
+                <button
+                  onClick={() => setActiveServer('vidsrc')}
+                  style={{
+                    background: activeServer === 'vidsrc' ? '#6366f1' : 'rgba(255, 255, 255, 0.05)',
+                    color: '#fff',
+                    border: '1px solid rgba(99, 102, 241, 0.4)',
+                    padding: '0.25rem 0.6rem',
+                    borderRadius: '4px',
+                    fontSize: '0.72rem',
+                    fontWeight: 700,
+                    cursor: 'pointer',
+                  }}
+                >
+                  Server 2: IDLIX
                 </button>
                 <button
                   onClick={() => setActiveServer('multiembed_direct')}
@@ -354,7 +369,7 @@ export default function PlayerModal({
                     cursor: 'pointer',
                   }}
                 >
-                  Server 2: Direct Mirror
+                  Server 3: Moviebox
                 </button>
                 <button
                   onClick={() => setActiveServer('smashystream')}
@@ -369,14 +384,14 @@ export default function PlayerModal({
                     cursor: 'pointer',
                   }}
                 >
-                  Server 3: Smashy 5-in-1
+                  Server 4: Bstation (Anime)
                 </button>
               </div>
             </div>
 
             <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', lineHeight: 1.5 }}>
-              <span style={{ color: '#10b981', fontWeight: 700 }}>• Server 1 (MultiEmbed) Aktif: </span>
-              Server paling stabil dan terbukti lancar memutar film & serial. Jika teks subtitle bahasa Indonesia belum muncul, klik tombol <strong>CC</strong> di dalam kontrol pemutar.
+              <span style={{ color: '#10b981', fontWeight: 700 }}>• Server Aktif: </span>
+              Mendukung penuh <strong>Film Barat</strong>, <strong>Film Indonesia</strong>, <strong>Drakor</strong>, dan <strong>Anime (Bstation)</strong> gratis tanpa langganan. Jika teks Subtitle Indonesia belum aktif, klik tombol <strong>CC</strong> di dalam kontrol pemutar.
             </div>
           </div>
 
@@ -400,7 +415,7 @@ export default function PlayerModal({
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
               <ShieldAlert size={18} color="#e50914" style={{ flexShrink: 0 }} />
               <span>
-                <strong style={{ color: '#fff' }}>Tips Menonton:</strong> Server 1 (MultiEmbed) adalah server rekomendasi yang paling stabil. Jika buffering, pilih server alternatif di bawah.
+                <strong style={{ color: '#fff' }}>Tips Streaming:</strong> Server 1 (LK21 MultiEmbed) adalah server rekomendasi utama paling stabil. Jika buffering, pilih server alternatif (IDLIX, Moviebox, Bstation) di bawah.
                 <br/>
                 <strong style={{ color: '#f5c518', fontSize: '0.78rem' }}>⌨️ Shortcut:</strong>
                 <span style={{ fontSize: '0.76rem' }}> Tekan angka <strong>1-7</strong> ganti server • <strong>← →</strong> pindah episode • <strong>ESC</strong> tutup</span>
@@ -438,7 +453,7 @@ export default function PlayerModal({
             >
               <Server size={16} color="#e50914" />
               <span style={{ fontSize: '0.88rem', fontWeight: 700, color: '#ffffff' }}>
-                Pilihan Server Streaming (MultiEmbed, SmashyStream, VidSrc, AutoEmbed):
+                Pilihan Server Streaming (LK21, IDLIX, Moviebox, Bstation):
               </span>
             </div>
 

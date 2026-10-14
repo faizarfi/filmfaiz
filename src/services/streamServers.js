@@ -1,21 +1,21 @@
-// Streaming Embed Server Providers (MultiEmbed, VidSrc, SmashyStream, AutoEmbed, 2Embed)
-// Menempatkan server paling stabil & working (MultiEmbed) sebagai Server 1 Utama tanpa embel-embel berbayar
+// Streaming Embed Server Providers (LK21, IDLIX, Moviebox & Bstation Style)
+// Mendukung penuh: Film Barat, Film Indonesia, Drakor, dan Anime Sub Indo gratis tanpa langganan
 
 export const STREAM_SERVERS = [
   {
     id: 'multiembed',
-    name: 'Server 1: MultiEmbed (Utama)',
-    tag: 'Paling Stabil • 1080p HD',
-    brand: 'MultiEmbed',
+    name: 'Server 1: LK21 (MultiEmbed Utama)',
+    tag: 'Barat, Indo, Drakor & Anime • Paling Lancar',
+    brand: 'LK21',
     quality: '1080p Full HD',
     speed: 'Sangat Cepat & Pasti Jalan',
     subtitles: 'Subtitle Indonesia Lengkap',
-    brandColor: '#e50914', // Faiz Red
+    brandColor: '#e50914', // LK21 / Faiz Red
     badgeBg: 'rgba(229, 9, 20, 0.15)',
     badgeBorder: 'rgba(229, 9, 20, 0.4)',
     hasSyncSettings: false,
     getUrl: ({ mediaType, id, season = 1, episode = 1 }) => {
-      // MultiEmbed: Terbukti paling stabil dan langsung play
+      // MultiEmbed: Mendukung Movie (Barat/Indo) & TV (Drakor/Anime) dengan parameter tmdb=1
       if (mediaType === 'tv') {
         return `https://multiembed.mov/?video_id=${id}&tmdb=1&s=${season}&e=${episode}`;
       }
@@ -23,19 +23,39 @@ export const STREAM_SERVERS = [
     },
   },
   {
-    id: 'multiembed_direct',
-    name: 'Server 2: MultiEmbed Direct',
-    tag: 'Mirror Cepat • Bebas Buffering',
-    brand: 'MultiEmbed',
-    quality: '1080p Full HD Murni',
-    speed: 'Ultra Cepat Direct Stream',
+    id: 'vidsrc',
+    name: 'Server 2: IDLIX (VidSrc Alpha)',
+    tag: 'Populer IDLIX • Sub Indo Pas',
+    brand: 'IDLIX',
+    quality: '1080p HD',
+    speed: 'Stabil & Bebas Buffering',
     subtitles: 'Auto Subtitle Indonesia',
+    brandColor: '#6366f1', // Indigo
+    badgeBg: 'rgba(99, 102, 241, 0.15)',
+    badgeBorder: 'rgba(99, 102, 241, 0.4)',
+    hasSyncSettings: false,
+    getUrl: ({ mediaType, id, season = 1, episode = 1 }) => {
+      // VidSrc: Server andalan IDLIX & LK21 untuk film bioskop dan series
+      if (mediaType === 'tv') {
+        return `https://vidsrc.me/embed/tv?tmdb=${id}&season=${season}&episode=${episode}`;
+      }
+      return `https://vidsrc.me/embed/movie?tmdb=${id}`;
+    },
+  },
+  {
+    id: 'multiembed_direct',
+    name: 'Server 3: Moviebox (Direct Stream)',
+    tag: 'Film Barat & Indo • Mirror Cepat',
+    brand: 'Moviebox',
+    quality: '1080p Full HD Murni',
+    speed: 'Direct Fast CDN',
+    subtitles: 'Auto Sub Indo',
     brandColor: '#10b981', // Emerald
     badgeBg: 'rgba(16, 185, 129, 0.15)',
     badgeBorder: 'rgba(16, 185, 129, 0.4)',
     hasSyncSettings: false,
     getUrl: ({ mediaType, id, season = 1, episode = 1 }) => {
-      // Jalur direct MultiEmbed
+      // Jalur direct mirror Moviebox
       if (mediaType === 'tv') {
         return `https://multiembed.mov/directstream.php?video_id=${id}&tmdb=1&s=${season}&e=${episode}`;
       }
@@ -44,18 +64,18 @@ export const STREAM_SERVERS = [
   },
   {
     id: 'smashystream',
-    name: 'Server 3: Smashy 5-in-1',
-    tag: 'Bisa Ganti Sumber di Dalam Player',
-    brand: 'Smashy',
+    name: 'Server 4: Bstation (Anime & Drakor)',
+    tag: 'Khusus Anime & Drakor • 5 Server di Player',
+    brand: 'Bstation',
     quality: '720p / 1080p HD',
     speed: 'Banyak Sumber Cadangan',
-    subtitles: 'Pilihan Sub Indo Lengkap',
+    subtitles: 'Pilihan Sub Indo',
     brandColor: '#8b5cf6', // Violet
     badgeBg: 'rgba(139, 92, 246, 0.15)',
     badgeBorder: 'rgba(139, 92, 246, 0.4)',
     hasSyncSettings: false,
     getUrl: ({ mediaType, id, season = 1, episode = 1 }) => {
-      // SmashyStream: Memiliki 5 server internal (F4, F5, dll) di dalam controllernya
+      // SmashyStream: Sangat bagus untuk Anime & K-Drama dengan 5 mirror internal (F4, F5, dll)
       if (mediaType === 'tv') {
         return `https://player.smashy.stream/tv/${id}?s=${season}&e=${episode}`;
       }
@@ -63,28 +83,28 @@ export const STREAM_SERVERS = [
     },
   },
   {
-    id: 'vidsrc',
-    name: 'Server 4: VidSrc (LK21 / Idlix)',
-    tag: 'Server Populer Film & Series',
-    brand: 'VidSrc',
+    id: 'twoembed',
+    name: 'Server 5: 2Embed VIP (Cadangan LK21)',
+    tag: 'Alternatif Cadangan Film & Serial',
+    brand: 'LK21',
     quality: '1080p HD',
     speed: 'Stabil',
-    subtitles: 'Subtitle Indonesia',
+    subtitles: 'Auto Subtitle',
     brandColor: '#f59e0b', // Amber
     badgeBg: 'rgba(245, 158, 11, 0.15)',
     badgeBorder: 'rgba(245, 158, 11, 0.4)',
     hasSyncSettings: false,
     getUrl: ({ mediaType, id, season = 1, episode = 1 }) => {
       if (mediaType === 'tv') {
-        return `https://vidsrc.me/embed/tv?tmdb=${id}&season=${season}&episode=${episode}`;
+        return `https://www.2embed.cc/embedtv/${id}&s=${season}&e=${episode}`;
       }
-      return `https://vidsrc.me/embed/movie?tmdb=${id}`;
+      return `https://www.2embed.cc/embed/${id}`;
     },
   },
   {
     id: 'autoembed',
-    name: 'Server 5: AutoEmbed Cloud',
-    tag: 'Cadangan Cepat',
+    name: 'Server 6: AutoEmbed Cloud',
+    tag: 'Cadangan Bebas Pop-up',
     brand: 'AutoEmbed',
     quality: '1080p Fast Buffer',
     speed: 'Stabil',
@@ -101,28 +121,9 @@ export const STREAM_SERVERS = [
     },
   },
   {
-    id: 'twoembed',
-    name: 'Server 6: 2Embed VIP',
-    tag: 'Alternatif Cadangan',
-    brand: '2Embed',
-    quality: '1080p HD',
-    speed: 'Stabil',
-    subtitles: 'Auto Subtitle',
-    brandColor: '#6366f1', // Indigo
-    badgeBg: 'rgba(99, 102, 241, 0.15)',
-    badgeBorder: 'rgba(99, 102, 241, 0.4)',
-    hasSyncSettings: false,
-    getUrl: ({ mediaType, id, season = 1, episode = 1 }) => {
-      if (mediaType === 'tv') {
-        return `https://www.2embed.cc/embedtv/${id}&s=${season}&e=${episode}`;
-      }
-      return `https://www.2embed.cc/embed/${id}`;
-    },
-  },
-  {
     id: 'vidlink',
-    name: 'Server 7: VidLink Fast',
-    tag: '4K / 1080p High Bitrate',
+    name: 'Server 7: VidLink Pro HD',
+    tag: '1080p / 4K UHD High Bitrate',
     brand: 'VidLink',
     quality: '1080p / 4K UHD',
     speed: 'High Bitrate',

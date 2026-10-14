@@ -225,15 +225,15 @@ export default function App() {
   const getTabTitle = () => {
     switch (activeTab) {
       case 'movies':
-        return 'Film Bioskop Terlengkap';
+        return 'Film Barat & Box Office (LK21 & Moviebox)';
       case 'series':
         return 'Serial TV Populer Mancanegara';
       case 'kdrama':
-        return 'Drama Korea Terbaru & Hits (Drakor)';
+        return 'Drama Korea (Drakor Sub Indo)';
       case 'anime':
         return 'Anime Subtitle Indonesia (Bstation Style)';
       case 'indo':
-        return 'Koleksi Film Bioskop Indonesia';
+        return 'Koleksi Film Bioskop Indonesia (Indo)';
       default:
         return 'Semua Kategori';
     }
